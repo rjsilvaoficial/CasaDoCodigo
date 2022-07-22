@@ -1,0 +1,17 @@
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\bin\Debug\netcoreapp2.0\CasaDoCodigo.deps.json
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\bin\Debug\netcoreapp2.0\CasaDoCodigo.runtimeconfig.json
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\bin\Debug\netcoreapp2.0\CasaDoCodigo.runtimeconfig.dev.json
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\bin\Debug\netcoreapp2.0\CasaDoCodigo.dll
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\bin\Debug\netcoreapp2.0\CasaDoCodigo.pdb
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.AssemblyInfoInputs.cache
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.AssemblyInfo.cs
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.csproj.CoreCompileInputs.cache
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.dll
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.pdb
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.genruntimeconfig.cache
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\bin\Debug\netcoreapp2.0\_Recursos\dados\livros.json
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.csproj.AssemblyReference.cache

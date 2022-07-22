@@ -1,0 +1,162 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\site.css" />
+    <Content Remove="wwwroot\images\logo.png" />
+    <Content Remove="wwwroot\images\produtos\large_001.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_002.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_003.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_004.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_005.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_006.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_007.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_008.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_009.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_010.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_011.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_012.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_013.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_014.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_015.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_016.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_017.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_018.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_019.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_020.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_021.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_022.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_023.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_024.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_025.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_026.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_027.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_028.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_029.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_030.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_031.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_032.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_033.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_034.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_035.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_036.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_037.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_038.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_039.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_040.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_041.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_042.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_043.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_044.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_045.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_046.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_047.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_048.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_049.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_050.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_051.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_052.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_053.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_054.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_055.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_056.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_057.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_058.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_059.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_060.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_061.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_062.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_063.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_064.jpg" />
+    <Content Remove="wwwroot\images\produtos\large_065.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\site.css" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\produtos\large_001.jpg" />
+    <None Include="wwwroot\images\produtos\large_002.jpg" />
+    <None Include="wwwroot\images\produtos\large_003.jpg" />
+    <None Include="wwwroot\images\produtos\large_004.jpg" />
+    <None Include="wwwroot\images\produtos\large_005.jpg" />
+    <None Include="wwwroot\images\produtos\large_006.jpg" />
+    <None Include="wwwroot\images\produtos\large_007.jpg" />
+    <None Include="wwwroot\images\produtos\large_008.jpg" />
+    <None Include="wwwroot\images\produtos\large_009.jpg" />
+    <None Include="wwwroot\images\produtos\large_010.jpg" />
+    <None Include="wwwroot\images\produtos\large_011.jpg" />
+    <None Include="wwwroot\images\produtos\large_012.jpg" />
+    <None Include="wwwroot\images\produtos\large_013.jpg" />
+    <None Include="wwwroot\images\produtos\large_014.jpg" />
+    <None Include="wwwroot\images\produtos\large_015.jpg" />
+    <None Include="wwwroot\images\produtos\large_016.jpg" />
+    <None Include="wwwroot\images\produtos\large_017.jpg" />
+    <None Include="wwwroot\images\produtos\large_018.jpg" />
+    <None Include="wwwroot\images\produtos\large_019.jpg" />
+    <None Include="wwwroot\images\produtos\large_020.jpg" />
+    <None Include="wwwroot\images\produtos\large_021.jpg" />
+    <None Include="wwwroot\images\produtos\large_022.jpg" />
+    <None Include="wwwroot\images\produtos\large_023.jpg" />
+    <None Include="wwwroot\images\produtos\large_024.jpg" />
+    <None Include="wwwroot\images\produtos\large_025.jpg" />
+    <None Include="wwwroot\images\produtos\large_026.jpg" />
+    <None Include="wwwroot\images\produtos\large_027.jpg" />
+    <None Include="wwwroot\images\produtos\large_028.jpg" />
+    <None Include="wwwroot\images\produtos\large_029.jpg" />
+    <None Include="wwwroot\images\produtos\large_030.jpg" />
+    <None Include="wwwroot\images\produtos\large_031.jpg" />
+    <None Include="wwwroot\images\produtos\large_032.jpg" />
+    <None Include="wwwroot\images\produtos\large_033.jpg" />
+    <None Include="wwwroot\images\produtos\large_034.jpg" />
+    <None Include="wwwroot\images\produtos\large_035.jpg" />
+    <None Include="wwwroot\images\produtos\large_036.jpg" />
+    <None Include="wwwroot\images\produtos\large_037.jpg" />
+    <None Include="wwwroot\images\produtos\large_038.jpg" />
+    <None Include="wwwroot\images\produtos\large_039.jpg" />
+    <None Include="wwwroot\images\produtos\large_040.jpg" />
+    <None Include="wwwroot\images\produtos\large_041.jpg" />
+    <None Include="wwwroot\images\produtos\large_042.jpg" />
+    <None Include="wwwroot\images\produtos\large_043.jpg" />
+    <None Include="wwwroot\images\produtos\large_044.jpg" />
+    <None Include="wwwroot\images\produtos\large_045.jpg" />
+    <None Include="wwwroot\images\produtos\large_046.jpg" />
+    <None Include="wwwroot\images\produtos\large_047.jpg" />
+    <None Include="wwwroot\images\produtos\large_048.jpg" />
+    <None Include="wwwroot\images\produtos\large_049.jpg" />
+    <None Include="wwwroot\images\produtos\large_050.jpg" />
+    <None Include="wwwroot\images\produtos\large_051.jpg" />
+    <None Include="wwwroot\images\produtos\large_052.jpg" />
+    <None Include="wwwroot\images\produtos\large_053.jpg" />
+    <None Include="wwwroot\images\produtos\large_054.jpg" />
+    <None Include="wwwroot\images\produtos\large_055.jpg" />
+    <None Include="wwwroot\images\produtos\large_056.jpg" />
+    <None Include="wwwroot\images\produtos\large_057.jpg" />
+    <None Include="wwwroot\images\produtos\large_058.jpg" />
+    <None Include="wwwroot\images\produtos\large_059.jpg" />
+    <None Include="wwwroot\images\produtos\large_060.jpg" />
+    <None Include="wwwroot\images\produtos\large_061.jpg" />
+    <None Include="wwwroot\images\produtos\large_062.jpg" />
+    <None Include="wwwroot\images\produtos\large_063.jpg" />
+    <None Include="wwwroot\images\produtos\large_064.jpg" />
+    <None Include="wwwroot\images\produtos\large_065.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Shared\_Layout.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
