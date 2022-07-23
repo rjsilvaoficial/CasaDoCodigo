@@ -15,3 +15,4 @@ C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\obj\Debug\netcoreapp2.0\Casa
 C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.genruntimeconfig.cache
 C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\bin\Debug\netcoreapp2.0\_Recursos\dados\livros.json
 C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\obj\Debug\netcoreapp2.0\CasaDoCodigo.csproj.AssemblyReference.cache
+C:\Projetos\AspNetCoreMVC\CasaDoCodigo\CasaDoCodigo\bin\Debug\netcoreapp2.0\livros.json

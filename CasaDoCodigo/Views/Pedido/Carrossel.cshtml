@@ -1,4 +1,33 @@
-﻿<h3>Catálogo</h3>
+﻿@model List<Produto>
+
+<h3>Catálogo</h3>
+
+
+
+@*@foreach (var produto in Model)
+{
+    <div>@produto.Nome</div>
+}*@
+
+@*@foreach (var p in Model)
+    {
+
+        <div class="col-md-3 col-sm-3 col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <img class="img-produto-carrossel" src="/images/produtos/large_001.jpg" />
+                </div>
+                <div class="panel-footer produto-footer">
+                    <div class="produto-nome">@p.Nome</div>
+                    <div><h4><strong>R$ @p.Preco</strong></h4></div>
+                    <div class="text-center">
+                        <a href="/" class="btn btn-success">Adicionar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }*@
+
 
 <div id="my-carousel" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
@@ -62,9 +91,8 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
+
         <div class="item ">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-lg-3">
@@ -124,10 +152,10 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
+
+
 
     <!-- Controls -->
     <a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
