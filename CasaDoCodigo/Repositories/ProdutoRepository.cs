@@ -24,7 +24,11 @@ namespace CasaDoCodigo.Repositories
         {
             foreach (var livro in livros)
             {
-                _context.Set<Produto>().Add(new Produto(livro.Codigo, livro.Nome, livro.Preco));
+                if (!_context.Set<Produto>().Where(p=>p.Codigo == livro.Codigo).Any())
+                {
+                    _context.Set<Produto>().Add(new Produto(livro.Codigo, livro.Nome, livro.Preco));
+                }
+
             }
             _context.SaveChanges();
         }

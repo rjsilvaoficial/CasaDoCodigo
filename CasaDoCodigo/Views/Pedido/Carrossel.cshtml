@@ -4,12 +4,106 @@
 
 
 
-@*@foreach (var produto in Model)
-{
-    <div>@produto.Nome</div>
-}*@
+<div id="my-carousel" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
 
-@*@foreach (var p in Model)
+        @*Codigo definindo parametros de paginação*@
+        @{ 
+            const int TAMANHO_PAGINA = 4;
+
+            int paginas = (int)Math.Ceiling((double)Model.Count() / TAMANHO_PAGINA);
+        }
+
+        @{ 
+            for(int pagina = 0; pagina < paginas; pagina++)
+            {
+
+                //A expressão atua junto ao código para manter 4 itens por pagina
+                <div class="item @(pagina == 0 ? "active" : "")">
+                    <div class="row">
+                        @{ 
+                            var produtosDaPagina = Model.Skip(pagina*TAMANHO_PAGINA).Take(TAMANHO_PAGINA); 
+                         }
+                        @foreach (Produto produto in produtosDaPagina)
+                        {
+                            <div class="col-md-3 col-sm-3 col-lg-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        @*@(produto.Codigo).ext inclui cod da foto*@
+                                        <img class="img-produto-carrossel" src="/images/produtos/large_@(produto.Codigo).jpg" />
+                                    </div>
+                                    <div class="panel-footer produto-footer">
+                                        <div class="produto-nome">@produto.Nome</div>
+                                        <div><h4><strong>R$ @produto.Preco</strong></h4></div>
+                                        <div class="text-center">
+                                            <a href="/" class="btn btn-success">Adicionar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                
+                        }
+
+
+                    </div>
+                </div>
+            }
+        }
+
+        
+
+    </div>
+
+
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#my-carousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@foreach (var produto in Model)
+    {
+        <div>@produto.Nome</div>
+    }*@
+
+@* Aqui eu crio uma página única exibindo todos itens da model
+    @foreach (var p in Model)
     {
 
         <div class="col-md-3 col-sm-3 col-lg-3">
@@ -29,125 +123,70 @@
     }*@
 
 
-<div id="my-carousel" class="carousel slide" data-ride="carousel">
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/large_001.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">ASP.NET Core MVC</div>
-                            <div><h4><strong>R$ 69,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
+
+
+<!--Essa estrutura gera um carrossel contendo duas páginas de 4 itens cada
+<div id="my-carousel" class="carousel slide" data-ride="carousel">-->
+<!-- Wrapper for slides -->
+<!--<div class="carousel-inner" role="listbox">
+
+    <div class="item active">
+
+        informações da pagina 1
+
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="img-produto-carrossel" src="/images/produtos/large_001.jpg" />
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/large_035.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">PostgreSQL</div>
-                            <div><h4><strong>R$ 69,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/large_036.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Business Intelligence</div>
-                            <div><h4><strong>R$ 69,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/large_037.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Seguran&#xE7;a</div>
-                            <div><h4><strong>R$ 69,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
+                    <div class="panel-footer produto-footer">
+                        <div class="produto-nome">ASP.NET Core MVC</div>
+                        <div><h4><strong>R$ 69,90</strong></h4></div>
+                        <div class="text-center">
+                            <a href="/" class="btn btn-success">Adicionar</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="item ">
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/large_038.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">gest&#xE3;o de produtos</div>
-                            <div><h4><strong>R$ 69,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="img-produto-carrossel" src="/images/produtos/large_035.jpg" />
+                    </div>
+                    <div class="panel-footer produto-footer">
+                        <div class="produto-nome">PostgreSQL</div>
+                        <div><h4><strong>R$ 69,90</strong></h4></div>
+                        <div class="text-center">
+                            <a href="/" class="btn btn-success">Adicionar</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/large_039.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Algoritmos em Java</div>
-                            <div><h4><strong>R$ 69,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="img-produto-carrossel" src="/images/produtos/large_036.jpg" />
+                    </div>
+                    <div class="panel-footer produto-footer">
+                        <div class="produto-nome">Business Intelligence</div>
+                        <div><h4><strong>R$ 69,90</strong></h4></div>
+                        <div class="text-center">
+                            <a href="/" class="btn btn-success">Adicionar</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/large_040.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Xamarin Forms</div>
-                            <div><h4><strong>R$ 69,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
-                        </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="img-produto-carrossel" src="/images/produtos/large_037.jpg" />
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-lg-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img class="img-produto-carrossel" src="/images/produtos/large_041.jpg" />
-                        </div>
-                        <div class="panel-footer produto-footer">
-                            <div class="produto-nome">Big Data</div>
-                            <div><h4><strong>R$ 69,90</strong></h4></div>
-                            <div class="text-center">
-                                <a href="/" class="btn btn-success">Adicionar</a>
-                            </div>
+                    <div class="panel-footer produto-footer">
+                        <div class="produto-nome">Seguran&#xE7;a</div>
+                        <div><h4><strong>R$ 69,90</strong></h4></div>
+                        <div class="text-center">
+                            <a href="/" class="btn btn-success">Adicionar</a>
                         </div>
                     </div>
                 </div>
@@ -155,10 +194,72 @@
         </div>
     </div>
 
+    informações da pagina 2
 
+    <div class="item ">
 
-    <!-- Controls -->
-    <a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="img-produto-carrossel" src="/images/produtos/large_038.jpg" />
+                    </div>
+                    <div class="panel-footer produto-footer">
+                        <div class="produto-nome">gest&#xE3;o de produtos</div>
+                        <div><h4><strong>R$ 69,90</strong></h4></div>
+                        <div class="text-center">
+                            <a href="/" class="btn btn-success">Adicionar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="img-produto-carrossel" src="/images/produtos/large_039.jpg" />
+                    </div>
+                    <div class="panel-footer produto-footer">
+                        <div class="produto-nome">Algoritmos em Java</div>
+                        <div><h4><strong>R$ 69,90</strong></h4></div>
+                        <div class="text-center">
+                            <a href="/" class="btn btn-success">Adicionar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="img-produto-carrossel" src="/images/produtos/large_040.jpg" />
+                    </div>
+                    <div class="panel-footer produto-footer">
+                        <div class="produto-nome">Xamarin Forms</div>
+                        <div><h4><strong>R$ 69,90</strong></h4></div>
+                        <div class="text-center">
+                            <a href="/" class="btn btn-success">Adicionar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="img-produto-carrossel" src="/images/produtos/large_041.jpg" />
+                    </div>
+                    <div class="panel-footer produto-footer">
+                        <div class="produto-nome">Big Data</div>
+                        <div><h4><strong>R$ 69,90</strong></h4></div>
+                        <div class="text-center">
+                            <a href="/" class="btn btn-success">Adicionar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!-- Controls -->
+<!--<a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
@@ -166,4 +267,4 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-</div>
+</div>-->

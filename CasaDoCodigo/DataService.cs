@@ -21,26 +21,30 @@ namespace CasaDoCodigo
 
         public void InicializaDb()
         {
-            //Migrate() readiciona a cada inicialização da aplicação toda a lista de itens
-            //_context.Database.Migrate();
+            //_context.Database.EnsureCreated(); cria o db se não existir mas inviabiliza migrations
 
-            if (_context.Database.EnsureCreated())
-            {
-                List<Livro> livros = GetLivros();
+            _context.Database.Migrate();
 
-                _produtoRepository.SaveProdutos(livros);
-            }
+
+            List<Livro> livros = GetLivros();
+
+            _produtoRepository.SaveProdutos(livros);
+
         }
 
 
+        //O método abaixo implementa como LER UM TEXTO PARTINDO DE UM JSON E DEPOIS COMO TRANSFORMÁ-LO EM OBJETOS
+
         private static List<Livro> GetLivros()
         {
-            //Aqui lemos e armazenamos todo o json como uma string
+            //Aqui lemos e armazenamos todo um json (que está à nível de projeto) como uma string
+
             string json = File.ReadAllText("livros.json");
 
             //Abaixo usamos o JsonConvert do nuget Newtonsoft para desserializar em vários objetos
             //Para isso é necessário especificar entre <> do Deserialize o tipo como List e especificar o tipo da lista
             //E também usar a var que contém esse json a ser deserializado como atb
+
             List<Livro> livros = JsonConvert.DeserializeObject<List<Livro>>(json);
             return livros;
         }
